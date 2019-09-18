@@ -34,4 +34,17 @@ gatewayworker，然后移植本程序的业务逻辑部分即可。如果您是w
 5、在win下一定要记得双击 laychat/vendor/Workerman/start_for_win.bat 启动 workerman，不要关闭！！！
 
 
+Workerman启动成功的样子：
+
+----------------------- WORKERMAN -----------------------------
+Workerman version:3.3.2          PHP version:5.4.45
+------------------------ WORKERS -------------------------------
+worker              listen                    processes status
+Register            text://0.0.0.0:1236        1        [OK]
+ChatGateway         Websocket://0.0.0.0:7272   4        [OK]
+ChatBusinessWorker  none                       4        [OK]
+----------------------------------------------------------------
+Press Ctrl-C to quit. Start success.
+
+
 
