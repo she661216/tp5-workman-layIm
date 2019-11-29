@@ -48,3 +48,6 @@ Press Ctrl-C to quit. Start success.
 
 
 
+前端的layui im在static/layui/lay/modules/layim.js，此文件定义了发生和接受msg的的函数
+后端的业务在 \vendor\Workerman\Applications\Events.php，此文件保存socket接受到的msg
+

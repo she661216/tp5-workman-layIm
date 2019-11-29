@@ -42,7 +42,7 @@ layui.use('layim', function(layim){
 		,right: '0px' //默认0px，用于设定主面板右偏移量。该参数可避免遮盖你页面右下角已经的bar。
 		,chatLog: "{:url('Chatlog/index')}" //聊天记录地址（如果未填则不显示）
 		,find: "{:url('findgroup/index')}" //查找好友/群的地址（如果未填则不显示）
-		,copyright: false //是否授权，如果通过官网捐赠获得LayIM，此处可填true
+		,copyright: true //是否授权，如果通过官网捐赠获得LayIM，此处可填true
 	});
   
 	//建立WebSocket通讯
@@ -97,7 +97,9 @@ layui.use('layim', function(layim){
             // 检测聊天数据
             case 'chatMessage':
             	//console.log(data.data);
+            
                 layim.getMessage(data.data);
+             
                 break;
             // 离线消息推送
             case 'logMessage':
@@ -129,6 +131,21 @@ layui.use('layim', function(layim){
         });
     });
 
+
+    layim.on('chatChange', function(data){  
+    // 监听每次点击的事件
+ 
+        });
+        
+        layim.chat({ //自定义的聊天版面，可以随时调用
+            avatar: "http://cdn.firstlinkapp.com/upload/2016_6/1465575923433_33812.jpg",
+                id: 1,
+                name: "纸飞机",
+                sign: "在深邃的编码世界，做一枚轻盈的纸飞机",
+                type: "friend",
+                username: "纸飞机"
+        });
+    
 });    
 </script>
 </body>
